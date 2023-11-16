@@ -1,11 +1,7 @@
-@media (max-width: 768px) {
-    .register {
-      height: auto; /* Ajusta la altura según el contenido */
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 body, button {
-    font-family: "Inter";
+    font-family: 'Inter';
     color: #E5E7EB;
     display: flex;
     flex-direction: column;
@@ -44,7 +40,6 @@ label[for=name], label[for=email] {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
 }
 
 .step-container {
