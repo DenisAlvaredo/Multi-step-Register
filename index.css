@@ -1,0 +1,124 @@
+body, button {
+    font-family: "Inter";
+    color: #E5E7EB;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+body {
+    background-color: #121826;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+p {
+    margin: 0.7rem 0px;
+}
+
+label[for=name], label[for=email] {
+    margin: 1rem 0px;
+}
+
+::placeholder {
+    color: #A1A1A9;
+}
+
+.register {
+    width: 28rem;
+    height: 25rem;
+    border-width: 1px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #A1A1A9;
+    background-color: #212936;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-container {
+    display: none;
+}
+.active-step {
+    display: flex;
+}
+
+.continue {
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 1rem;
+    background: linear-gradient(180deg, rgba(132,94,238,1) 0%, rgba(100,37,170,1) 100%);
+    border-style: none;
+    align-items: center;
+    padding: 0.8rem 1.7rem;
+    border-radius: 30px;
+}
+
+.button-container {
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+    background-color: #394150;
+    color: #A1A1A9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-color: #A1A1A9;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.button-container input {
+    display: none;
+}
+
+.button-container input:checked + label {
+    background-color: #845EEE;
+    color: #E5E7EB;
+    width: 346px;
+    height: 50px;}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #212936;
+}
+
+.circle-active {
+    background-color: #652CD1;
+}
+
+#step1, #step2, #step3 {
+    flex-direction: column;
+    width: 23rem;
+    height: 22rem;
+}
+
+#name, #email {
+    padding-left: 1.2rem;
+    border-width: 1px;
+    border-color: #A1A1A9;
+    border-style: solid;
+    border-radius: 10px;
+    background-color:#212936;
+    height: 2.25rem;
+    color: #A1A1A9;
+}
+
+#name:not(:placeholder-shown), #email:not(:placeholder-shown) {
+    border-color: #652CD1;
+}
+
+#progress-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 9rem;
+    height: 1rem;
+    background-color: #121826;
+    margin: 2rem;
+}

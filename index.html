@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Multi-Step Register</title>
+</head>
+<body>
+    <div class="register">
+        <div id="step1" class="step-container active-step">
+            <h3>Register</h3>
+            <label for="name">Name</label>
+            <input type="text" placeholder="enter your name" id="name" required>
+            <label for="email">Email</label>
+            <input type="email" placeholder="example@gmail.com" id="email">
+            <button onclick="toStep2()" class="continue">Continue</button>
+        </div>
+    
+        <div id="step2" class="step-container">
+            <h3>Which topics you are interested in?</h3>
+            <div class="button-container">
+                <input type="checkbox" id="option1" name="option1" value="option1">
+                <label for="option1">Software Development</label>
+            </div>
+
+            <div class="button-container">
+                <input type="checkbox" id="option2" name="option2" value="option2">
+                <label for="option2">User Experience</label>
+            </div>
+            
+            <div class="button-container">
+                <input type="checkbox" id="option3" name="option3" value="option3">
+                <label for="option3">Graphic Design</label>
+            </div>
+            <button onclick="toStep3()" class="continue">Continue</button>
+        </div>
+    
+        <div id="step3" class="step-container">
+            <h3>Summary</h3>
+            <p>Name: <span id="displayedName"></span></p>
+            <p>Email: <span id="displayedEmail"></span></p>
+            <p>Topics: </p>
+                <ul>
+                    <li><span id="displayedOption"></span></li>
+                </ul>
+            <button onclick="confirmAlert()" class="continue">Confirm</button>
+        </div>
+    </div>
+
+    <div id="progress-bar">
+        <p>Step <span id="step-number">1</span> of 3</p>
+        <div class="circle circle-active" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+        <div class="circle" id="circle3"></div>
+    </div>
+</body>
+</html>
