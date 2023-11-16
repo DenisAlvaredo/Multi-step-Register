@@ -12,17 +12,20 @@ function next() {
 
 function toStep2() {
     const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
+    const emailInput = document.getElementById('email');
+    const email = emailInput.value.trim();
     const summaryName = document.getElementById('displayedName');
     const summaryEmail = document.getElementById('displayedEmail');
+
+    const isEmailValid = emailInput.checkValidity();
     
-    if (name !== '' && email !== '' && currentStep < totalSteps) {
+    if (name !== '' && isEmailValid && currentStep < totalSteps) {
         next();
         updateProgressCircles(currentStep)
         summaryName.textContent = name;
         summaryEmail.textContent = email;
     } else {
-        alert('Please complete all fields.');
+        alert('Please complete all fields with valid information.');
     }
 }
 

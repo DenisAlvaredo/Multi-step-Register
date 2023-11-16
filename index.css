@@ -60,26 +60,36 @@ label[for=name], label[for=email] {
 
 .button-container {
     margin: 10px;
-    cursor: pointer;
-    user-select: none;
-    background-color: #394150;
+    background-color: #4D5562;
+    border-radius: 15px;
+    border: 1px solid #A1A1A9;
     color: #A1A1A9;
-    padding: 15px 20px;
-    border-radius: 10px;
-    border-color: #A1A1A9;
-    border-style: solid;
-    border-width: 1px;
+    overflow: hidden;
+    float: left;
+}
+
+.button-container label {
+    float: left; 
+    line-height: 3.0em;
+    width: 22.4em; 
+    height: 3.0em;
+}
+
+.button-container span {
+    text-align: left;
+    padding-left: 1rem;
+    display: block;
 }
 
 .button-container input {
+    position: absolute;
     display: none;
 }
 
-.button-container input:checked + label {
+.button-container input:checked + span {
     background-color: #845EEE;
     color: #E5E7EB;
-    width: 346px;
-    height: 50px;}
+}
 
 .circle {
     width: 10px;

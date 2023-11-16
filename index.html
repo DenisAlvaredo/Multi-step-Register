@@ -9,30 +9,36 @@
 </head>
 <body>
     <div class="register">
-        <div id="step1" class="step-container active-step">
+        <div id="step1" class="step-container active-step" >
             <h3>Register</h3>
             <label for="name">Name</label>
             <input type="text" placeholder="enter your name" id="name" required>
             <label for="email">Email</label>
-            <input type="email" placeholder="example@gmail.com" id="email">
+            <input type="email" placeholder="example@gmail.com" id="email" required>
             <button onclick="toStep2()" class="continue">Continue</button>
         </div>
     
         <div id="step2" class="step-container">
             <h3>Which topics you are interested in?</h3>
             <div class="button-container">
-                <input type="checkbox" id="option1" name="option1" value="option1">
-                <label for="option1">Software Development</label>
+                <label>
+                    <input type="checkbox" id="option1" name="option1" value="option1">
+                    <span>Software Development</span>
+                </label>
             </div>
 
             <div class="button-container">
-                <input type="checkbox" id="option2" name="option2" value="option2">
-                <label for="option2">User Experience</label>
+                <label>
+                    <input type="checkbox" id="option2" name="option2" value="option2">
+                    <span>User Experience</span>
+                </label>
             </div>
             
             <div class="button-container">
-                <input type="checkbox" id="option3" name="option3" value="option3">
-                <label for="option3">Graphic Design</label>
+                <label>
+                    <input type="checkbox" id="option3" name="option3" value="option3">
+                    <span>Graphic Design</span>
+                </label>
             </div>
             <button onclick="toStep3()" class="continue">Continue</button>
         </div>
